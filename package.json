@@ -1,0 +1,20 @@
+{
+  "name": "todolist-nodejs",
+  "version": "1.0.0",
+  "description": "Create todolist REST API with nodejs no framework",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wahyupambudi/todolist-nodejs.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wahyupambudi/todolist-nodejs/issues"
+  },
+  "homepage": "https://github.com/wahyupambudi/todolist-nodejs#readme"
+}
