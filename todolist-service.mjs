@@ -1,5 +1,5 @@
 export class TodoListService {
-  todolist = ["Eat", "Chicken"];
+  todolist = ["Ayam", "Geprek"];
 
   getJsonTodoList() {
     return JSON.stringify({
@@ -45,4 +45,21 @@ export class TodoListService {
       response.end();
     });
   }
+
+  deleteTodo(request, response) {
+    request.addListener("data", (data) => {
+      const body = JSON.parse(data.toString());
+      if(this.todolist[body.id]) {
+        // this.todolist.pop(body.id);
+        this.todolist.splice(body.id, 1);
+      }
+
+      // console.log(body.id)
+      // console.log(this.todolist[body.id])
+
+      response.write(this.getJsonTodoList());
+      response.end();
+    })
+  }
+
 }
